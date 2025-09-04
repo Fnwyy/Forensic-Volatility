@@ -1,7 +1,7 @@
 # 🕵️ Forensic Analysis Notes
 
 This repository contains anonymized **forensic analysis case studies** made with Volatility.  
-The goal is purely **educational**: to practice memory analysis, malware detection, and network investigation, without exposing real data or challenge solutions.  
+The goal is purely **educational**: to practice memory analysis, malware detection, and network investigation.  
 
 ## 📂 Content
 - Memory dump exploration  
