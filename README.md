@@ -16,15 +16,17 @@ This command displays all registry hives.
 
 **Example output :**
 
-Offset	FileFullPath	File output
-0x8b20c008	\REGISTRY\MACHINE\SYSTEM	Disabled
-0x8b23c008	\REGISTRY\MACHINE\HARDWARE	Disabled
-0x8ee66008	\Device\HarddiskVolume1\Boot\BCD	Disabled
-0x8ee66740	\SystemRoot\System32\Config\SOFTWARE	Disabled
-0x90cab9d0	\SystemRoot\System32\Config\DEFAULT	Disabled
-0x9670e9d0	??\C:\Users*\ntuser.dat	Disabled
-0x9aad6148	\SystemRoot\System32\Config\SAM	Disabled
-0x9ab25008	\SystemRoot\System32\Config\SECURITY	Disabled
+| Offset     | FileFullPath                         | File output |
+| ---------- | ------------------------------------ | ----------- |
+| 0x8b20c008 | \REGISTRY\MACHINE\SYSTEM             | Disabled    |
+| 0x8b23c008 | \REGISTRY\MACHINE\HARDWARE           | Disabled    |
+| 0x8ee66008 | \Device\HarddiskVolume1\Boot\BCD     | Disabled    |
+| 0x8ee66740 | \SystemRoot\System32\Config\SOFTWARE | Disabled    |
+| 0x90cab9d0 | \SystemRoot\System32\Config\DEFAULT  | Disabled    |
+| 0x9670e9d0 | ??\C:\Users\*\ntuser.dat             | Disabled    |
+| 0x9aad6148 | \SystemRoot\System32\Config\SAM      | Disabled    |
+| 0x9ab25008 | \SystemRoot\System32\Config\SECURITY | Disabled    |
+
 
 > We focus on the **SYSTEM hive** because it contains the machine name.
 
