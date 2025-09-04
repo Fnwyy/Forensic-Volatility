@@ -53,7 +53,7 @@ python3 vol.py -f /path/to/xxx.dmp windows.pstree.PsTree | awk '{print $2, $3, $
 ### Fake `iexplore.exe`:
 
 ``` bash
-python3 vol.py -f /path/to/ch2.dmp windows.cmdline --pid 2772
+python3 vol.py -f /path/to/xxx.dmp windows.cmdline --pid 2772
 ```
 
     PID: 2772
@@ -87,7 +87,7 @@ print(f"MD5: {md5_hash}")
 
 **Example result:**
 
-    49979149632639432397b3a1df8cb43d
+    47879149632639467397b2a1df9cb43d
 
 ✅ Case completed.
 
