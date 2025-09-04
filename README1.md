@@ -61,5 +61,5 @@ This command displays the value of the `ComputerName` key, which contains the co
 
 ---
 
-**Educational tip:**
+**📌 Educational tip:**
 You can use this method to explore any type of Windows memory dump and extract similar information (registry keys, system configurations, etc.)
