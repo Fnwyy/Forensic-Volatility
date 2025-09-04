@@ -7,20 +7,21 @@
 First, list all running processes with Volatility:
 
 ``` bash
-python3 vol.py -f /path/to/ch2.dmp windows.pslist
+python3 vol.py -f /path/to/xxx.dmp windows.pslist
 ```
 
-**Example output (anonymized excerpt):**
+**Example output :**
 
-  PID    PPID   ImageFileName   Threads   CreateTime
-  ------ ------ --------------- --------- ---------------------
-  308    4      smss.exe        29        2013-01-12 16:38:09
-  500    448    winlogon.exe    111       2013-01-12 16:38:14
-  1220   560    AvastSvc.exe    1180      2013-01-12 16:38:28
-  2548   2484   explorer.exe    766       2013-01-12 16:40:27
-  2772   2548   iexplore.exe    74        2013-01-12 16:40:34
-  3152   2548   cmd.exe         23        2013-01-12 16:44:50
-  1136   2548   iexplore.exe    454       2013-01-12 16:57:44
+| PID  | PPID | ImageFileName | Threads | CreateTime          |
+| ---- | ---- | ------------- | ------- | ------------------- |
+| 308  | 4    | smss.exe      | 29      | 2013-01-12 16:38:09 |
+| 500  | 448  | winlogon.exe  | 111     | 2013-01-12 16:38:14 |
+| 1220 | 560  | AvastSvc.exe  | 1180    | 2013-01-12 16:38:28 |
+| 2548 | 2484 | explorer.exe  | 766     | 2013-01-12 16:40:27 |
+| 2772 | 2548 | iexplore.exe  | 74      | 2013-01-12 16:40:34 |
+| 3152 | 2548 | cmd.exe       | 23      | 2013-01-12 16:44:50 |
+| 1136 | 2548 | iexplore.exe  | 454     | 2013-01-12 16:57:44 |
+
 
 > Multiple `cmd.exe` and `iexplore.exe` instances are suspicious.
 
@@ -31,7 +32,7 @@ python3 vol.py -f /path/to/ch2.dmp windows.pslist
 Use the `pstree` plugin to check parent-child process relations:
 
 ``` bash
-python3 vol.py -f /path/to/ch2.dmp windows.pstree.PsTree | awk '{print $2, $3, $4, $5}' | grep -E "iexplore.exe|cmd.exe"
+python3 vol.py -f /path/to/xxx.dmp windows.pstree.PsTree | awk '{print $2, $3, $4, $5}' | grep -E "iexplore.exe|cmd.exe"
 ```
 
 **Example output:**
@@ -62,7 +63,7 @@ python3 vol.py -f /path/to/ch2.dmp windows.cmdline --pid 2772
 ### Legitimate `iexplore.exe`:
 
 ``` bash
-python3 vol.py -f /path/to/ch2.dmp windows.cmdline --pid 1136
+python3 vol.py -f /path/to/xxx.dmp windows.cmdline --pid 1136
 ```
 
     PID: 1136
